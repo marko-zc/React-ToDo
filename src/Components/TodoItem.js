@@ -16,6 +16,11 @@ class TodoItem extends React.Component
         toggleTodo(todo.id);
     };
 
+    handleRemoveTodoClick = () => {
+        const { todo, removeTodo } = this.props;
+        removeTodo(todo.id);
+    }
+
     render()
     {
         const { todo } = this.props;
@@ -32,6 +37,7 @@ class TodoItem extends React.Component
                 </span>
                 <span
                     className="todo-item__delete-button"
+                    onClick={this.handleRemoveTodoClick}
                 >
                     x
                 </span>
@@ -44,5 +50,6 @@ export default TodoItem;
 
 TodoItem.propTypes = {
     todo: PropTypes.object,
-    toggleTodo: PropTypes.func
+    toggleTodo: PropTypes.func,
+    removeTodo: PropTypes.func
 };

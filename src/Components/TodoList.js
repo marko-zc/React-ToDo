@@ -4,7 +4,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import TodoItem from './TodoItem';
 
 
-function TodoList({ todos, toggleTodo })
+function TodoList({ todos, toggleTodo, removeTodo })
 {
     return(
         <ListGroup>
@@ -14,6 +14,7 @@ function TodoList({ todos, toggleTodo })
                         key={todo.id}
                         todo={todo}
                         toggleTodo={toggleTodo}
+                        removeTodo={removeTodo}
                     />
                 );
             })}
@@ -25,5 +26,6 @@ export default TodoList;
 
 TodoList.propTypes = {
     todos: PropTypes.array,
-    toggleTodo: PropTypes.func
+    toggleTodo: PropTypes.func,
+    removeTodo: PropTypes.func
 };

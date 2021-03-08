@@ -42,6 +42,12 @@ class App extends React.Component
     this.setState({ todos });
   }
 
+  handleRemoveTodo = (id) => {
+    const { todos } = this.state;
+    const newTodos = todos.filter(todo => todo.id !== id);
+
+    this.setState({ todos: newTodos });
+  }
 
   render()
   {
@@ -55,6 +61,7 @@ class App extends React.Component
           <TodoList 
             todos={todos}
             toggleTodo={this.handleToggleTodo}
+            removeTodo={this.handleRemoveTodo}
           />
         </div>
       </div>
