@@ -1,0 +1,54 @@
+.app {
+    text-align: center;
+    margin: 0 auto;
+    width: 650px;
+    padding-top: 100px;
+    font-family: monospace;
+    position: relative;
+}
+
+.header {
+    font-size: 62px;
+    font-weight: 400;
+    opacity: .5;
+}
+
+.todo-container {
+    width: 500px;
+    margin: 48px auto 24px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 0 8px 1px rgba(130, 100, 120, 1);
+}
+
+.todo-item {
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.todo-item.list-group-item {
+    border: none;
+}
+
+.todo-item_item {
+    flex: 1;
+    text-align: start;
+    cursor: pointer;
+}
+
+.todo-item__delete-button {
+    cursor: pointer;
+    font-size: 27px;
+}
+
+.todo-item__completed {
+    text-decoration: line-through;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border: 1px solid #ced4da;
+}
