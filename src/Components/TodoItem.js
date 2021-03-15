@@ -18,7 +18,10 @@ class TodoItem extends React.Component
 
     handleRemoveTodoClick = () => {
         const { todo, removeTodo } = this.props;
-        removeTodo(todo.id);
+        var confirm = window.confirm('Are you sure you want to delete "' + todo.task + '"?');
+        if (confirm == true) {
+            removeTodo(todo.id);
+        }
     }
 
     render()
